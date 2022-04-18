@@ -63,6 +63,8 @@ npm install
 - npm install jquery -> Instala o jquery via npm e coloca na pasta node-modules
 - npm install bootstrap-> Instala o bootstrap  na pasta node-modules
 - npm i font-awesome -> Instala o fontawesome na pasta node-module
+- npm install --global http-server
+
 
 ## Dependencias do gulp
 
@@ -71,3 +73,4 @@ npm install
 - npm install gulp-rename --save-dev
 - npm install gulp-uglify --save-dev -> arquivos js
 - npm install --save-dev gulp-imagemin@7.1.0"
+- npm install --save gulp-htmlmin
