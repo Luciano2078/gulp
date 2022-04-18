@@ -61,7 +61,8 @@ npm install
 - npm init -y -> Cria o arquivo package.json
 - npm install gulp-cli -g -> Instala a interface de programação do gulp
 - npm install jquery -> Instala o jquery via npm e coloca na pasta node-modules
-- npm install bootstrao -> Instala o bootstrap  na pasta node-modules
+- npm install bootstrap-> Instala o bootstrap  na pasta node-modules
+- npm i font-awesome -> Instala o fontawesome na pasta node-module
 
 ## Dependencias do gulp
 
@@ -69,3 +70,4 @@ npm install
 - npm install gulp-cssmin --save-dev -> arquivos css
 - npm install gulp-rename --save-dev
 - npm install gulp-uglify --save-dev -> arquivos js
+- npm install --save-dev gulp-imagemin@7.1.0"
