@@ -64,6 +64,8 @@ npm install
 - npm install bootstrap-> Instala o bootstrap  na pasta node-modules
 - npm i font-awesome -> Instala o fontawesome na pasta node-module
 - npm install --global http-server
+- npm install --save-dev gulp-babel @babel/core @babel/preset-env
+- npm install --save-dev browser-sync
 
 
 ## Dependencias do gulp
