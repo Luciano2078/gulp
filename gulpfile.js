@@ -9,6 +9,7 @@ const uglify = require('gulp-uglify')
 const image = require('gulp-imagemin')
 const babel = require('gulp-babel')
 const browserSync = require('browser-sync').create()
+const sass = require('gulp-sass')( require('node-sass'))
 const reload = browserSync.reload
 
 
@@ -17,12 +18,19 @@ function tarefasCSS(cb) {
             './node_modules/bootstrap/dist/css/bootstrap.css', 
             './vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css', 
             './node_modules/font-awesome/css/font-awesome.css',
-            './src/css/style.css'
         ])
         .pipe(concat('libs.css'))
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'})) //libs.min.css
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./dist/css'))  // Cria arquivo em novo diretório
+}
+
+function tarefasSASS(cb) {
+    gulp.src('./src/scss/**/*.scss')
+    .pipe(sass()) // transforma sass para css
+    .pipe(gulp.dest('./dist/css'))
+
+    return cb()
 }
 
 function tarefasJS() {
@@ -83,11 +91,12 @@ function end(cb){
     return cb()
 }
 
-const process = series( tarefasHTML, tarefasJS, tarefasCSS, end)
+const process = series( tarefasHTML, tarefasJS, tarefasCSS, tarefasSASS, end)
 
 exports.default = process
 exports.styles = tarefasCSS
 exports.scripts = tarefasJS
 exports.html = tarefasHTML
 exports.images = tarefasImagem
+exports.sass = tarefasSASS
 
