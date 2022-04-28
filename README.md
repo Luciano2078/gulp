@@ -42,6 +42,10 @@ Todo o processo é executado a partir node.js e gulp-cli (linha de comando)
 - Instalar o gulp-cli (Command Line Interface) globalmente: npm install gulp-cli -g
 - Criar o gulpfile.js
 
+## Instalando modulo sass com gulp
+
+- npm install node-sass gulp-sass --save-dev
+
 ## Trabalhando com Gulp
 - Baseado em funções: tasks
 - Organização do projeto
